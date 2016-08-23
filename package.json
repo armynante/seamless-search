@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint ./src",
-    "start": "cross-env NODE_ENV=development babel-node ./server.js",
+    "dev": "cross-env NODE_ENV=development babel-node ./server.js",
     "build": "rimraf dist && webpack --config ./webpack.config.prod.js",
-    "serve": "cross-env NODE_ENV=production babel-node ./server.js"
+    "start": "cross-env NODE_ENV=production babel-node ./server.js"
   },
   "author": "Andrew Armenante <andrew.armenante@gmail.com>",
   "license": "MIT",
