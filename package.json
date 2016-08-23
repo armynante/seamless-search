@@ -5,9 +5,11 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint ./src",
-    "dev": "cross-env NODE_ENV=development babel-node ./server.js",
-    "build": "rimraf dist && webpack --config ./webpack.config.prod.js",
-    "start": "babel-node ./server.js"
+    "dev": "NODE_ENV=development babel-node ./server.js",
+    "build": "rm -rf ./dist && NODE_ENV=production webpack -p --config ./webpack/release.js",
+    "start": "node ./server.js",
+    "buildServer":"babel server.js --out-file dist/server.js -s",
+    "postinstall": "npm run build && npm run buildServer"
   },
   "author": "Andrew Armenante <andrew.armenante@gmail.com>",
   "license": "MIT",
@@ -37,7 +39,6 @@
     "react-router": "^2.6.1",
     "react-router-redux": "^4.0.5",
     "redux": "^3.5.2",
-    "rimraf": "^2.5.4",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
