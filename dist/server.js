@@ -8,13 +8,13 @@ var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
 
-var _webpack = require('webpack');
-
-var _webpack2 = _interopRequireDefault(_webpack);
-
 var _middleware = require('./src/middleware');
 
 var _middleware2 = _interopRequireDefault(_middleware);
+
+var _webpack = require('webpack');
+
+var _webpack2 = _interopRequireDefault(_webpack);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
