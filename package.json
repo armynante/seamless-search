@@ -28,9 +28,7 @@
     "redux": "^3.5.2",
     "webpack": "^1.13.1",
     "material-ui": "^0.15.4",
-    "react-tap-event-plugin": "^1.0.0"
-  },
-  "devDependencies": {
+    "react-tap-event-plugin": "^1.0.0",
     "autoprefixer": "^6.3.7",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
