@@ -36,18 +36,7 @@ class Home extends Component {
 		return (
       <div>
         <div>
-           <AutoComplete
-             hintText="Type anything"
-             dataSource={this.state.dataSource}
-             onUpdateInput={this.handleUpdateInput}
-           />
-           <AutoComplete
-             hintText="Type anything"
-             dataSource={this.state.dataSource}
-             onUpdateInput={this.handleUpdateInput}
-             floatingLabelText="Full width"
-             fullWidth={true}
-           />
+          <h1>THIS IS HOME</h1>
          </div>
 				<Link to='/page'>
 					<button>Go to page</button>
