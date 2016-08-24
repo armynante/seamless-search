@@ -16,7 +16,7 @@ const buildMuiTheme = (userAgent, callback) => {
     },
     userAgent: userAgent,
   })
-  calback(theme);
+  callback(theme);
 }
 
 class Main extends React.Component {
