@@ -20,7 +20,6 @@ export default (req, res) => {
         userAgent: req.headers['user-agent']
       };
 
-      const muiTheme = buildMuiTheme(req.headers['user-agent']);
       // console.log(buildMuiTheme(req.headers['user-agent']));
       // console.log("agent" + req.headers['user-agent']);
       // console.log("headers:" + req.headers);
@@ -38,10 +37,10 @@ export default (req, res) => {
 					</html>
 				`);
 			} else if(process.env.NODE_ENV == 'production') {
-        console.log(req.headers['user-agent']);
-        console.log(req.headers);
+        const muiTheme = buildMuiTheme(req.headers['user-agent']);
+        console.log(buildMuiTheme);
         console.log(muiTheme);
-        console.log("PROD");
+        console.log(buildMuiTheme(req.headers['user-agent']));
 				res.status(200).send(`
 					<!doctype html>
 					<html>
