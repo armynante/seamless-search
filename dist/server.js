@@ -52,4 +52,4 @@ app.listen(8000, '0.0.0.0', function (err) {
 	}
 });
 
-//# sourceMappingURL=.server.js.map
+//# sourceMappingURL=server.js.map
