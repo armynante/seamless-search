@@ -7,7 +7,8 @@
     "lint": "eslint ./src",
     "dev": "node ./server",
     "build": "rm -rf dist && webpack --config ./webpack.config.prod.js ",
-    "postinstall": "npm run build && node ./server"
+    "postinstall": "npm run build",
+    "start": "node ./server"
   },
   "author": "Andrew Armenante <andrew.armenante@gmail.com>",
   "license": "MIT",
