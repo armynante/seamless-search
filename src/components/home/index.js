@@ -29,7 +29,7 @@ class Home extends Component {
       ],
     });
   };
-  
+
 	render() {
 		const { dispatch, todos } = this.props;
 

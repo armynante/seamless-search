@@ -3,8 +3,8 @@ import { renderToString } from 'react-dom/server';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { match, RouterContext } from 'react-router';
-import reducers from './reducers';
-import routes from './routes';
+import reducers from '../src/reducers';
+import routes from '../src/routes';
 import { Main, buildMuiTheme} from '../src/materialTheme.js'
 
 
@@ -45,11 +45,11 @@ export default (req, res) => {
 						</header>
 						<body>
 							<div id='app'>${renderToString(
-                <MuiThemeProvider theme={muiTheme}>
+                <Main theme={muiTheme}>
   								<Provider store={createStore(reducers)}>
   									<RouterContext {...renderProps} />
   								</Provider>
-                </MuiThemeProvider>
+                </Main>
 							)}</div>
 							<script src='bundle.js'></script>
 						</body>

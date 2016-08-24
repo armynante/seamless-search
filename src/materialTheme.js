@@ -22,7 +22,6 @@ class Main extends React.Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={this.props.theme}>
-        <div>Hello world</div>
       </MuiThemeProvider>
     );
   }
