@@ -6,10 +6,10 @@
   "scripts": {
     "lint": "eslint ./src",
     "dev": "NODE_ENV=development babel-node ./server.js",
-    "build": "rm -rf ./dist && NODE_ENV=production webpack -p --config ./webpack/release.js",
+    "build": "rm -rf ./dist && NODE_ENV=production webpack -p --config ./webpack.config.prod.js && npm run buildServer ",
     "start": "node ./server.js",
-    "buildServer":"babel server.js --out-file dist/server.js -s",
-    "postinstall": "npm run build && npm run buildServer"
+    "buildServer":"babel ./server.js --out-file dist/server.js -s",
+    "postinstall": "npm run build"
   },
   "author": "Andrew Armenante <andrew.armenante@gmail.com>",
   "license": "MIT",
