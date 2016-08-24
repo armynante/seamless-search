@@ -21,7 +21,8 @@ export default (req, res) => {
       };
 
       const muiTheme = buildMuiTheme(req.headers['user-agent']);
-
+      console.log(muiTheme);
+      console.log(req.headers['user-agent']);
       if(process.env.NODE_ENV == 'development') {
 				res.status(200).send(`
 					<!doctype html>
