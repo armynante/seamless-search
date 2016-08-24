@@ -23,6 +23,7 @@ class Main extends React.Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={this.props.theme}>
+        <div></div>
       </MuiThemeProvider>
     );
   }
