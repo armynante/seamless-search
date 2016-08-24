@@ -37,29 +37,27 @@ export default (req, res) => {
 					</html>
 				`);
 			} else if(process.env.NODE_ENV == 'production') {
-        const muiTheme = buildMuiTheme(req.headers['user-agent']);
-        console.log(buildMuiTheme);
-        console.log(muiTheme);
-        console.log(buildMuiTheme(req.headers['user-agent']));
-				res.status(200).send(`
-					<!doctype html>
-					<html>
-						<header>
-							<title>App</title>
-							<link rel='stylesheet' href='bundle.css'>
-						</header>
-						<body>
-							<div id='app'>${renderToString(
-                <Main theme={muiTheme}>
-  								<Provider store={createStore(reducers)}>
-  									<RouterContext {...renderProps} />
-  								</Provider>
-                </Main>
-							)}</div>
-							<script src='bundle.js'></script>
-						</body>
-					</html>
-				`);
+        buildMuiTheme(req.headers['user-agent'], (theme) => {
+  				res.status(200).send(`
+  					<!doctype html>
+  					<html>
+  						<header>
+  							<title>App</title>
+  							<link rel='stylesheet' href='bundle.css'>
+  						</header>
+  						<body>
+  							<div id='app'>${renderToString(
+                  <Main theme={theme}>
+    								<Provider store={createStore(reducers)}>
+    									<RouterContext {...renderProps} />
+    								</Provider>
+                  </Main>
+  							)}</div>
+  							<script src='bundle.js'></script>
+  						</body>
+  					</html>
+  				`);
+        });
 			}
 		} else {
 			res.status(404).send('Not found');
