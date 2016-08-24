@@ -36,6 +36,7 @@ export default (req, res) => {
 					</html>
 				`);
 			} else if(process.env.NODE_ENV == 'production') {
+        console.log(muiTheme);
 				res.status(200).send(`
 					<!doctype html>
 					<html>

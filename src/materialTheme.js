@@ -20,6 +20,7 @@ const buildMuiTheme = (userAgent) => {
 
 class Main extends React.Component {
   render() {
+    console.log('got props' + this.props);
     return (
       <MuiThemeProvider muiTheme={this.props.theme}>
       </MuiThemeProvider>
