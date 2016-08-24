@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
-import webpack from 'webpack';
 import middleware from './src/middleware';
+import webpack from 'webpack';
 
 const app = express();
 
