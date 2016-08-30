@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import todos from './todos';
+import { terms } from './search.js';
 
 export default combineReducers({
-    todos,
+    terms,
     routing: routerReducer
 });

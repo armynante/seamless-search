@@ -4,7 +4,7 @@ import webpack from 'webpack';
 import middleware from './middleware';
 
 const app = express();
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 9000
 
 
 if(process.env.NODE_ENV === 'development') {

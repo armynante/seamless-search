@@ -53,7 +53,7 @@ export default (req, res) => {
     								</Provider>
                   </Main>
   							)}</div>
-  							<script src='bundle.js'></script>
+  							<script src=${__dir}/bundle.js'></script>
   						</body>
   					</html>
   				`);
